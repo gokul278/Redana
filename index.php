@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>
 <html lang="en-US">
 
@@ -315,7 +318,7 @@
 
 				</div>
 				<div class="header-right">
-					<div class="search-content">
+					<!-- <div class="search-content">
 						<div class="search-btn-outer hidden-lg hidden-md">
 							<i class="icon-search"></i>
 						</div>
@@ -327,7 +330,7 @@
 								</span>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<div class="cart-content">
 						<div id="cart" class="btn-group btn-block">
 							<button type="button" data-toggle="dropdown" data-loading-text="<i class='fa fa-spinner fa-spin' aria-hidden='true'></i>" class="btn btn-inverse btn-block btn-lg dropdown-toggle"><i class="icon-bag"></i> <span id="cart-total">2<span class="hidden">item(s) - $0.00</span></span></button>
@@ -406,14 +409,36 @@
 					</div>
 
 					<div id="header_ac" class="dropdown">
+						<?php
+                            if(isset($_SESSION["customer_id"])){
+                        ?>   
+                        <a href="#" title="My Account" class="dropdown-toggle" data-toggle="dropdown" align="center">
+                            <i class="icon-user1"></i><span>Hi!, <?php echo $_SESSION["customer_firstname"].' '.$_SESSION["customer_lastname"]; ?></span><span
+                                class="caret hidden"></span>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-right account-link-toggle">
+                            <li><a href="my-account.php">My Account</a></li>
+							<li><a href="logout.php">Logout</a></li>
+                        </ul>
+
+                        <?php
+                            }else{
+                        ?> 
+
 						<a href="#" title="My Account" class="dropdown-toggle" data-toggle="dropdown">
-							<i class="icon-user1"></i><span class="hidden">My Account</span><span class="caret hidden"></span>
-						</a>
-						<ul class="dropdown-menu dropdown-menu-right account-link-toggle">
-							<li><a href="Signup.php">Signup</a>
-							</li>
+                            <i class="icon-user1"></i><span class="hidden">My Account</span><span
+                                class="caret hidden"></span>
+                        </a>
+                        
+                        <ul class="dropdown-menu dropdown-menu-right account-link-toggle">
+                            <li><a href="Signup.php">Signup</a></li>
 							<li><a href="my-account.php">Login</a></li>
-						</ul>
+                        </ul>
+
+                        <?php
+                            }
+                        ?>
 					</div>
 				</div>
 			</div>

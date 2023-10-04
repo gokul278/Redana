@@ -325,7 +325,7 @@
                     </script>
                 </div>
                 <div class="header-right">
-                    <div class="search-content">
+                    <!-- <div class="search-content">
                         <div class="search-btn-outer hidden-lg hidden-md">
                             <i class="icon-search"></i>
                         </div>
@@ -339,7 +339,7 @@
                                 </span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="cart-content">
                         <div id="cart" class="btn-group btn-block">
                             <button type="button" data-toggle="dropdown"
@@ -425,8 +425,6 @@
                                 class="caret hidden"></span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right account-link-toggle">
-                            <li><a href="Signup.php">Signup</a>
-                            </li>
                             <li><a href="my-account.php">Login</a></li>
                         </ul>
                     </div>
@@ -446,7 +444,7 @@
                             <h3 class="toggled relative">Account</h3>
                             <ul class="list-unstyled">
                                 <li><a href="my-account.php" class="list-group-item">Login</a></li>
-                                <li><a href="#" class="list-group-item">Forgotten Password</a></li>
+                                <li><a href="forgetpassword.php" class="list-group-item">Forgotten Password</a></li>
                             </ul>
                         </div>
                     </div>
@@ -491,7 +489,7 @@
                                     <div class="form-group required">
                                         <label class="col-sm-2 control-label" for="input-telephone">Mobile Number</label>
                                         <div class="col-sm-10">
-                                            <input type="tel" pattern="[7-9]{1}[0-9]{9}" name="mobilenumber" placeholder="Mobile Number"
+                                            <input type="tel" pattern="[6-9]{1}[0-9]{9}" name="mobilenumber" placeholder="Mobile Number"
                                                 id="input-telephone" class="form-control" required>
                                         </div>
                                     </div>

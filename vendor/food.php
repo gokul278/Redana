@@ -38,7 +38,7 @@ if(isset($_SESSION["vendor_id"])){
     <h3>Enter Activation Code</h3>
     <br>
     <div style="width:30%;" align="center">
-      <input type="tel" id='codeinput' class="form-control" style="text-align: center;" placeholder="Activation Code" required/>
+      <input type="number" id='codeinput' class="form-control" style="text-align: center;" placeholder="Activation Code" required/>
     </div>
     <p id='activationerror' style="color:red;font-weight:600;margin-top:20px"></p>
     <button onclick="activationbtn()" class='btn btn-outline-primary'>Activate</button>

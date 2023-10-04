@@ -332,7 +332,7 @@ session_start();
                     </script>
                 </div>
                 <div class="header-right">
-                    <div class="search-content">
+                    <!-- <div class="search-content">
                         <div class="search-btn-outer hidden-lg hidden-md">
                             <i class="icon-search"></i>
                         </div>
@@ -346,7 +346,7 @@ session_start();
                                 </span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="cart-content">
                         <div id="cart" class="btn-group btn-block">
                             <button type="button" data-toggle="dropdown"
@@ -427,15 +427,36 @@ session_start();
                         </div>
                     </div>
                     <div id="header_ac" class="dropdown">
+    
+                        <?php
+                            if(isset($_SESSION["customer_id"])){
+                        ?>   
+                        <a href="#" title="My Account" class="dropdown-toggle" data-toggle="dropdown" align="center">
+                            <i class="icon-user1"></i><span>Hi!, <?php echo $_SESSION["customer_firstname"].' '.$_SESSION["customer_lastname"]; ?></span><span
+                                class="caret hidden"></span>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-right account-link-toggle">
+                            <li><a href="index.php">Home</a></li>
+                            <li><a href="logout.php">Logout</a></li>
+                        </ul>
+
+                        <?php
+                            }else{
+                        ?>   
+
                         <a href="#" title="My Account" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="icon-user1"></i><span class="hidden">My Account</span><span
                                 class="caret hidden"></span>
                         </a>
+                        
                         <ul class="dropdown-menu dropdown-menu-right account-link-toggle">
-                            <li><a href="Signup.php">Signup</a>
-                            </li>
-                            <li><a href="my-account.php">Login</a></li>
+                            <li><a href="Signup.php">Signup</a></li>
                         </ul>
+
+                        <?php
+                            }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -451,11 +472,27 @@ session_start();
                     <div class="account-content list-group">
                         <div class="box-content">
                             <h3 class="toggled relative">Account</h3>
+                            <?php
+                            if(isset($_SESSION["customer_id"])){
+                            ?>
                             <ul class="list-unstyled">
-                                <li><a href="Signup.php" class="list-group-item">Register</a></li>
-                                <li><a href="#" class="list-group-item">Forgotten Password</a></li>
-                                
+
+                            <li><a href="logout.php" class="list-group-item">Logout</a></li>
+
                             </ul>
+                            <?php
+                            }else{
+                            ?>
+                            <ul class="list-unstyled">
+
+                            <li><a href="Signup.php" class="list-group-item">Register</a></li>
+                            <li><a href="forgetpassword.php" class="list-group-item">Forgotten Password</a></li>
+
+                            </ul>
+                            <?php
+                            }
+                            ?>
+                            
                         </div>
                     </div>
                     
@@ -464,32 +501,106 @@ session_start();
                     <div class="breadcrumb-main">
                         <div class="breadcrumb-container clearfix">
                             <ul class="breadcrumb">
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.php">Home</a></li>
                              
-                                <li><a href="my-account.html">Login</a></li>
+                                <li><a href="my-account.php">Login</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <?php
                     if(isset($_SESSION["customer_id"])){
+                        if($_SESSION["customer_activation"] == "false"){
                     ?>                   
                         <div class="col-sm-6">
                             <div class="well">
                                 <h2>Activation</h2>
                                 <br>
-                                <form action="#" method="post" enctype="multipart/form-data">
+                                <form id="activation">
                                     <div class="form-group">
                                         <label class="control-label" for="input-email">Enter Activation Code</label>
-                                        <input type="text" name="email" value="" placeholder="E-Mail Address"
-                                            id="input-email" class="form-control mt-2">
+                                        <input type="number" name="activationcode" value="" style="text-align: center;" placeholder="Enter Activation Code"
+                                            class="form-control mt-3" onclick="activationbtn()" required>
                                     </div>
                                     <br>
                                     <p id="activationerr" style="color:red"></p>
-                                    <input type="submit" value="Login" class="btn btn-primary">
+                                    <input type="hidden" name="way" value="activationcode">
+                                    <button type="submit" class="btn btn-primary"><div id="activationcode">Login</div></button>
                                 </form>
                             </div>
                         </div>
+
+                        <?php
+                        }else{
+                        ?>
+
+                        <div class="col-sm-6">
+                            <div class="well">
+                                <h2>Account Settings</h2>
+                                <br>
+                                <!-- <h>Account ID : </h2> -->
+                                <form align="start">
+                                
+                                <fieldset  id="account">
+                                    <div class="form-group required">
+                                    <label class="col-sm-2" for="input-firstname">Account ID : <b><?php echo $_SESSION["customer_id"];?></b></label>
+                                    </div>
+                                    <div class="form-group required">
+                                        <label class="col-sm-2" for="input-firstname">First Name</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" name="firstname" placeholder="First Name"
+                                                id="input-firstname" class="form-control" value="<?php echo $_SESSION["customer_firstname"];?>" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group required">
+                                        <label class="col-sm-2" for="input-lastname">Last Name</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" name="lastname" placeholder="Last Name"
+                                                id="input-lastname" class="form-control" value="<?php echo $_SESSION["customer_lastname"];?>" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group required">
+                                        <label class="col-sm-2" for="input-email">E-Mail</label>
+                                        <div class="col-sm-10">
+                                            <input type="email" name="email" placeholder="E-Mail"
+                                                id="input-email" class="form-control" onclick="removechk()" value="<?php echo $_SESSION["customer_email"];?>" readonly="readonly" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group required">
+                                        <label class="col-sm-2" for="input-telephone">Mobile Number</label>
+                                        <div class="col-sm-10">
+                                            <input type="tel" pattern="[6-9]{1}[0-9]{9}" name="mobilenumber" value="<?php echo $_SESSION["customer_mobilenumber"];?>" placeholder="Mobile Number"
+                                                id="input-telephone" class="form-control" required>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <div class="form-group required">
+                                        <label class="col-sm-2" for="password">Password</label>
+                                        <div class="col-sm-10">
+                                            <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="password" placeholder="Password"
+                                                id="password" class="form-control" onclick="removechk()" value="<?php echo $_SESSION["customer_password"];?>" required>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <!-- <div class="buttons clearfix">
+                                    <div align="center" class="pull-right">
+                                        <p>
+                                            I have read and agree to the <a href="privacy-policy.php" class="agree"><b>Privacy
+                                                    Policy</b></a>
+                                            <input type="checkbox" name="agree" value="1" class="form-check-input" required>
+                                        </p>
+                                        <br>
+                                        <p id="passchk" style="color:red"></p>
+                                        <button type="submit" class="btn btn-primary"><div id="regiterbtn">Register</div></button>
+                                    </div>
+                                </div> -->
+                            </form>
+                            </div>
+                        </div>
+
+                        <?php } ?>
+                    
                     <?php
                     }else{
                     ?>
@@ -497,22 +608,23 @@ session_start();
                             <div class="well">
                                 <h2>Login</h2>
                                 <br>
-                                <form action="#" method="post" enctype="multipart/form-data">
+                                <form id="loginaccount">
                                     <div class="form-group">
                                         <label class="control-label" for="input-email">E-Mail Address</label>
                                         <input type="text" name="email" value="" placeholder="E-Mail Address"
-                                            id="input-email" class="form-control">
+                                            id="email" class="form-control" onclick="clearerror()" required>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label" for="input-password">Password</label>
-                                        
+                                        <input name="way" type="hidden" value="loginaccount">
                                         <input type="password" name="password" value="" placeholder="Password"
-                                            id="input-password" class="form-control">
+                                            id="password" class="form-control" onclick="clearerror()" required>
                                             <br>
-                                        <a href="#">Forgotten Password</a>
+
+                                            <p id="errormessage" style="color:red"></p>
+                                        <!-- <a href="forgetpassword.php">Forgotten Password</a>                                         -->
                                     </div>
-                                    <input type="submit" value="Login" class="btn btn-primary">
-                                    <input type="hidden" name="redirect" value="">
+                                    <button type="submit" class="btn btn-primary"><div id="loginbtn">Login</div></button>
                                 </form>
                             </div>
                         </div>
@@ -626,6 +738,6 @@ session_start();
 
 </body>
 
-
+<script src="./js/my-account.js"></script>
 
 </html>

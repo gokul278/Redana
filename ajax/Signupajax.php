@@ -98,6 +98,7 @@ if ($count == 1) {
                 $_SESSION["customer_email"] = $email;
                 $_SESSION["customer_mobilenumber"] = $mobilenumber;
                 $_SESSION["customer_password"] = $password;
+                $_SESSION["customer_activation"] = "false";
                 $response["status"] = "success";
                 echo json_encode($response);
             }else{
