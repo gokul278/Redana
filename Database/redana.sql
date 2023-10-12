@@ -2,17 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
-<<<<<<< HEAD
--- Host: 127.0.0.1
--- Generation Time: Sep 22, 2023 at 05:51 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.0.28
-=======
 -- Host: localhost
--- Generation Time: Oct 02, 2023 at 03:46 AM
+-- Generation Time: Oct 12, 2023 at 11:06 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
->>>>>>> 330221c (Updated at 01/10/2023)
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -51,8 +44,6 @@ INSERT INTO `adminlogin` (`admin_id`, `username`, `password`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
-<<<<<<< HEAD
-=======
 -- Table structure for table `customerlogin`
 --
 
@@ -64,20 +55,22 @@ CREATE TABLE `customerlogin` (
   `customer_mobileno` varchar(12) NOT NULL,
   `customer_password` varchar(50) NOT NULL,
   `customer_activatiioncode` varchar(10) NOT NULL,
-  `customer_activationstatus` varchar(6) NOT NULL
+  `customer_activationstatus` varchar(6) NOT NULL,
+  `customer_forgetpasswordcode` varchar(10) NOT NULL,
+  `customer_forgetpasswordstatus` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `customerlogin`
 --
 
-INSERT INTO `customerlogin` (`customer_id`, `customer_firstname`, `customer_lastname`, `customer_mail`, `customer_mobileno`, `customer_password`, `customer_activatiioncode`, `customer_activationstatus`) VALUES
-(8005, 'GOKUL', 'M', 'gokulhk278@gmail.com', '9842653413', '1a35aa95cd412fe952d607c8031b821f', '659691', 'false');
+INSERT INTO `customerlogin` (`customer_id`, `customer_firstname`, `customer_lastname`, `customer_mail`, `customer_mobileno`, `customer_password`, `customer_activatiioncode`, `customer_activationstatus`, `customer_forgetpasswordcode`, `customer_forgetpasswordstatus`) VALUES
+(8009, 'GOKUL', 'M', 'gokulhk278@gmail.com', '9842653413', '1a35aa95cd412fe952d607c8031b821f', '809889', 'true', 'novalue', 'false'),
+(8010, 'Gowtham', 'J', 'gowthamjayaram333@gmail.com', '9360248850', 'a5ce312092aa0e2befdacfe783decae4', '300484', 'true', '988969', 'true');
 
 -- --------------------------------------------------------
 
 --
->>>>>>> 330221c (Updated at 01/10/2023)
 -- Table structure for table `food_menu`
 --
 
@@ -116,12 +109,7 @@ CREATE TABLE `vendorlogin` (
 --
 
 INSERT INTO `vendorlogin` (`vendor_id`, `name`, `email`, `password`, `mobile_number`, `address`, `image`, `activation_code`, `activation_status`, `type`) VALUES
-<<<<<<< HEAD
-(5731, 'Gokul Hotel', 'gokulhk278@outlook.com', '1a35aa95cd412fe952d607c8031b821f', '9842653413', 'Salem', '20230922173728_noodles.jpg', '248350', 'true', 'vendor'),
-(5732, 'GOKUL HOTEL', 'gokulhk278@gmail.com', '1a35aa95cd412fe952d607c8031b821f', '9842653413', 'Salem', '20230922174826_hotel.jpg', '444770', 'false', 'vendor');
-=======
 (5734, 'Hotel 1', 'gokulhk278@gmail.com', '1a35aa95cd412fe952d607c8031b821f', '9842653413', 'Salem', '20231001064019_Redana-logo.png', '269533', 'true', 'vendor');
->>>>>>> 330221c (Updated at 01/10/2023)
 
 --
 -- Indexes for dumped tables
@@ -134,15 +122,12 @@ ALTER TABLE `adminlogin`
   ADD PRIMARY KEY (`admin_id`);
 
 --
-<<<<<<< HEAD
-=======
 -- Indexes for table `customerlogin`
 --
 ALTER TABLE `customerlogin`
   ADD PRIMARY KEY (`customer_id`);
 
 --
->>>>>>> 330221c (Updated at 01/10/2023)
 -- Indexes for table `food_menu`
 --
 ALTER TABLE `food_menu`
@@ -165,33 +150,22 @@ ALTER TABLE `adminlogin`
   MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15925;
 
 --
-<<<<<<< HEAD
--- AUTO_INCREMENT for table `food_menu`
---
-ALTER TABLE `food_menu`
-  MODIFY `food_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
-=======
 -- AUTO_INCREMENT for table `customerlogin`
 --
 ALTER TABLE `customerlogin`
-  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8007;
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8011;
 
 --
 -- AUTO_INCREMENT for table `food_menu`
 --
 ALTER TABLE `food_menu`
   MODIFY `food_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=146;
->>>>>>> 330221c (Updated at 01/10/2023)
 
 --
 -- AUTO_INCREMENT for table `vendorlogin`
 --
 ALTER TABLE `vendorlogin`
-<<<<<<< HEAD
-  MODIFY `vendor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5733;
-=======
   MODIFY `vendor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5735;
->>>>>>> 330221c (Updated at 01/10/2023)
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

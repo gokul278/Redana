@@ -80,8 +80,8 @@ if ($count == 1) {
         </html>';
 
         if ($mail->send()) {
-            $sql = "INSERT INTO customerlogin (customer_firstname,customer_lastname,customer_mail,customer_mobileno,customer_password,customer_activatiioncode,customer_activationstatus)
-            VALUES ('{$firstname}','{$lastname}','{$email}','{$mobilenumber}','{$encrptpass}','{$createdotp}','false')";
+            $sql = "INSERT INTO customerlogin (customer_firstname,customer_lastname,customer_mail,customer_mobileno,customer_password,customer_activatiioncode,customer_activationstatus,customer_forgetpasswordcode,customer_forgetpasswordstatus)
+            VALUES ('{$firstname}','{$lastname}','{$email}','{$mobilenumber}','{$encrptpass}','{$createdotp}','false','novalue','false')";
             $res = $con->query($sql);
 
             if($res){
@@ -99,6 +99,8 @@ if ($count == 1) {
                 $_SESSION["customer_mobilenumber"] = $mobilenumber;
                 $_SESSION["customer_password"] = $password;
                 $_SESSION["customer_activation"] = "false";
+                $_SESSION["customer_forgetpasswordcode"] = "novalue";
+                $_SESSION["customer_forgetpasswordstatus"] = "false";
                 $response["status"] = "success";
                 echo json_encode($response);
             }else{

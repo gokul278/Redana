@@ -26,6 +26,8 @@ if($way == "loginaccount"){
                 $_SESSION["customer_mobilenumber"] = $row["customer_mobileno"];
                 $_SESSION["customer_password"] = $password;
                 $_SESSION["customer_activation"] = $row["customer_activationstatus"];
+                $_SESSION["customer_forgetpasswordcode"] = $row["customer_forgetpasswordcode"];
+                $_SESSION["customer_forgetpasswordstatus"] = $row["customer_forgetpasswordstatus"];
                 $response["status"] = "success";
                 if($row["customer_activationstatus"] == "false"){
                     $response["activationstatus"] = "false";

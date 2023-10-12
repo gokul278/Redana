@@ -452,6 +452,7 @@ session_start();
                         
                         <ul class="dropdown-menu dropdown-menu-right account-link-toggle">
                             <li><a href="Signup.php">Signup</a></li>
+                            <li><a href="my-account.php">Login</a></li>
                         </ul>
 
                         <?php
@@ -508,40 +509,71 @@ session_start();
                         </div>
                     </div>
                     
-                        
-                        <div class="col-sm-6">
-                            <div class="well">
-                                <h2>Forget Password</h2>
-                                <br>
-                                <form id="loginaccount">
-                                    <div class="form-group">
-                                        <label class="control-label" for="input-email">E-Mail Address</label>
-                                        <input type="text" name="email" value="" placeholder="E-Mail Address"
-                                            id="email" class="form-control" onclick="clearerror()" required>
-                                    </div>
-                                    <p id="errormessage" style="color:red"></p>
-                                    <button type="submit" class="btn btn-primary"><div id="loginbtn">Send OTP</div></button>
 
-                                    <!-- <div class="form-group">
+                    <?php
+                    if($_SESSION["customer_forgetpasswordstatus"]== "true"){
+                    ?>
+                    <div class="col-sm-6">
+                        <div class="well">
+                            <h2>Password Change</h2>
+                            <form id="forgetpasswordotp" class="mt-4">
+                                <div class="form-group">
                                         <label class="control-label" for="input-email">Enter OTP</label>
-                                        <input type="number" name="email" value="" placeholder="Enter OTP"
-                                            id="email" class="form-control" onclick="clearerror()" required>
+                                        <input type="number" name="otp" value="" placeholder="Enter OTP"
+                                            id="email" class="form-control" onclick="removeopterr()" required>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label" for="input-email">Enter New Password</label>
-                                        <input type="number" name="email" value="" placeholder="Enter OTP"
-                                            id="email" class="form-control" onclick="clearerror()" required>
+                                        <label class="control-label" for="password">Enter New Password</label>
+                                        <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="password" placeholder="Password"
+                                                id="password" class="form-control" onclick="removeopterr()" required>
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label" for="input-email">Enter Confirm New Password</label>
-                                        <input type="number" name="email" value="" placeholder="Enter OTP"
-                                            id="email" class="form-control" onclick="clearerror()" required>
+                                        <label class="control-label" for="repassword">Enter Confirm New Password</label>
+                                        <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="repassword" placeholder="Password"
+                                                id="repassword" class="form-control" onclick="removeopterr()" required>
                                     </div>
-                                    <p id="errormessage" style="color:red"></p>
-                                    <button type="submit" class="btn btn-primary"><div id="loginbtn">Change password</div></button> -->
+                                    <input type="hidden" name="way" value="forgetpasswordotp">
+                                    <div style="font-size:15px;color:red" align="start">
+                                        <div><span style="font-size:20px">*&nbsp;</span>A lowercase letter &nbsp;</div>
+                                        <div><span style="font-size:20px">*&nbsp;</span>A capital (UPPERCASE) Letter &nbsp;</div>
+                                        <div><span style="font-size:20px">*&nbsp;</span>A number &nbsp;</div>
+                                        <div><span style="font-size:20px">*&nbsp;</span>Minimum 8 characters &nbsp;</div>
+                                        <br>
+                                    </div>
+                                    <p id="opterrormessage" style="color:red"></p>
+                                    <button type="submit" class="btn btn-primary"><div id="passwordbtn">Change password</div></button>
+                                    <br><br>
+                                    <a href="resendotp.php">Resend OTP</a>
                                 </form>
                             </div>
                         </div>
+
+                    <?php
+                    }else{
+                    ?>
+
+                    <div class="col-sm-6">
+                            <div class="well">
+                                <h2>Forget Password</h2>
+                                <br>
+                                <form id="forgetpassword">
+                                    <div class="form-group">
+                                        <label class="control-label" for="input-email">E-Mail Address</label>
+                                        <input type="email" name="email" value="" placeholder="E-Mail Address"
+                                            id="email" class="form-control" onclick="clearerror()" required>
+                                    </div>
+                                    <input type="hidden" name="way" value="sendotp">
+                                    <p id="errormessage" style="color:red"></p>
+                                    <button type="submit" class="btn btn-primary"><div id="forgetpassbtn">Send OTP</div></button>
+                                </form>
+
+
+                                
+                            </div>
+                    </div>
+                    <?php
+                    }
+                    ?>
 
                     </div>
                 </div>
@@ -649,6 +681,6 @@ session_start();
 
 </body>
 
-<script src="./js/my-account.js"></script>
+<script src="./js/forgetpassword.js"></script>
 
 </html>

@@ -331,9 +331,16 @@ session_start();
 							</div>
 						</div>
 					</div> -->
+
+
+					<?php
+                        if(isset($_SESSION["customer_id"])){
+                    ?> 
+
+
 					<div class="cart-content">
 						<div id="cart" class="btn-group btn-block">
-							<button type="button" data-toggle="dropdown" data-loading-text="<i class='fa fa-spinner fa-spin' aria-hidden='true'></i>" class="btn btn-inverse btn-block btn-lg dropdown-toggle"><i class="icon-bag"></i> <span id="cart-total">2<span class="hidden">item(s) - $0.00</span></span></button>
+							<button type="button" data-toggle="dropdown" data-loading-text="<i class='fa fa-spinner fa-spin' aria-hidden='true'></i>" class="btn btn-inverse btn-block btn-lg dropdown-toggle"><i class="icon-bag"></i> <span id="cart-total">0<span class="hidden">item(s) - $0.00</span></span></button>
 							<ul class="dropdown-menu pull-right header-cart-toggle">
 								<li class="cart-content-product">
 									<table class="table table-striped">
@@ -407,6 +414,33 @@ session_start();
 							</ul>
 						</div>
 					</div>
+
+
+					<?php
+					}else{
+					?>
+
+					<div class="cart-content">
+						<div id="cart" class="btn-group btn-block">
+							<button type="button" data-toggle="dropdown" data-loading-text="<i class='fa fa-spinner fa-spin' aria-hidden='true'></i>" class="btn btn-inverse btn-block btn-lg dropdown-toggle"><i class="icon-bag"></i> <span id="cart-total">!<span class="hidden">item(s) - $0.00</span></span></button>
+							<ul class="dropdown-menu pull-right header-cart-toggle">
+								<li>
+									<br>
+									<div>
+										<p class="text-right product-cart-button">
+											<a href="Signup.php" class="btn cart-btn addtocart-btn"><i class="fa fa-shopping-cart hidden"></i> Sign Up </a>
+											&nbsp;&nbsp;&nbsp;<a href="my-account.php" class="btn cart-btn checkout-btn"><i class="fa fa-share hidden"></i> Login </a>
+										</p>
+										<p style="color:red" align="center">to continue</p>
+										<br>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<?php
+					}?>
 
 					<div id="header_ac" class="dropdown">
 						<?php
@@ -1030,8 +1064,8 @@ session_start();
 					
 					<div class="col-md-3">
 						<h5 style="color: white;" class="toggled">Quick links</h5>
-						<ul class="list-unstyled">
-							<li><a href="index.html" class="contact_site">Home</a></li>
+						<ul class="list-unstyled">htmlhtml
+							<li><a href="index.php" class="contact_site">Home</a></li>
 							<li><a href="#" class="contact_site">About
 									Us</a></li>
 							<li><a href="#" class="contact_site">Contact
