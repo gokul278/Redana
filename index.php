@@ -1,4 +1,5 @@
 <?php
+include('./requiredfiles/connectiondb.php');
 session_start();
 ?>
 <!DOCTYPE HTML>
@@ -64,7 +65,7 @@ session_start();
 			<div class="header-inner">
 				<div class="header-left">
 					<div id="logo">
-						<a href="index.html">
+						<a href="index.php">
 							<img style="width: 80px;height: 75px; border-radius: 50%; padding: 5px;" src="assets/images/Redana-logo.png" title="redana" alt="Redana" class="img-responsive">
 						</a>
 					</div>
@@ -92,7 +93,7 @@ session_start();
 												<ul class="themability_megamenu" data-megamenuid="55" data-transition="slide" data-animationtime="500">
 
 													<li class="home current-active active-first">
-														<a href="index.html">
+														<a href="index.php">
 															<span><strong> Home </strong></span>
 														</a>
 													</li>
@@ -116,27 +117,27 @@ session_start();
 																				<div class="col-sm-3 static-menu">
 																					<div class="menu">
 																						<ul>
-																							<li><a href="category.html" class="main-menu">Yummeys</a>
+																							<li><a href="category.php" class="main-menu">Yummeys</a>
 																								<ul>
-																									<li><a href="category.html">Briyani</a>
+																									<li><a href="category.php">Briyani</a>
 																									</li>
-																									<li><a href="category.html">Soup</a>
+																									<li><a href="category.php">Soup</a>
 																									</li>
-																									<li><a href="category.html">Veg Masala</a>
+																									<li><a href="category.php">Veg Masala</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Masala</a>
+																									<li><a href="category.php">Non - Veg Masala</a>
 																									</li>
-																									<li><a href="category.html">Veg Starters</a>
+																									<li><a href="category.php">Veg Starters</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Starters</a>
+																									<li><a href="category.php">Non - Veg Starters</a>
 																									</li>
-																									<li><a href="category.html">Tandoori </a>
+																									<li><a href="category.php">Tandoori </a>
 																									</li>
-																									<li><a href="category.html">Veg - Rice/Noodles</a>
+																									<li><a href="category.php">Veg - Rice/Noodles</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Rice/Noodles</a>
+																									<li><a href="category.php">Non - Veg Rice/Noodles</a>
 																									</li>
-																									<li><a href="category.html">Tiffen</a>
+																									<li><a href="category.php">Tiffen</a>
 																									</li>
 																								</ul>
 																							</li>
@@ -146,27 +147,27 @@ session_start();
 																				<div class="col-sm-3 static-menu">
 																					<div class="menu">
 																						<ul>
-																							<li><a href="category.html" class="main-menu">Hotel 2</a>
+																							<li><a href="category.php" class="main-menu">Hotel 2</a>
 																								<ul>
-																									<li><a href="category.html">Briyani</a>
+																									<li><a href="category.php">Briyani</a>
 																									</li>
-																									<li><a href="category.html">Soup</a>
+																									<li><a href="category.php">Soup</a>
 																									</li>
-																									<li><a href="category.html">Veg Masala</a>
+																									<li><a href="category.php">Veg Masala</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Masala</a>
+																									<li><a href="category.php">Non - Veg Masala</a>
 																									</li>
-																									<li><a href="category.html">Veg Starters</a>
+																									<li><a href="category.php">Veg Starters</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Starters</a>
+																									<li><a href="category.php">Non - Veg Starters</a>
 																									</li>
-																									<li><a href="category.html">Tandoori </a>
+																									<li><a href="category.php">Tandoori </a>
 																									</li>
-																									<li><a href="category.html">Veg - Rice/Noodles</a>
+																									<li><a href="category.php">Veg - Rice/Noodles</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Rice/Noodles</a>
+																									<li><a href="category.php">Non - Veg Rice/Noodles</a>
 																									</li>
-																									<li><a href="category.html">Tiffen</a>
+																									<li><a href="category.php">Tiffen</a>
 																									</li>
 																								</ul>
 																							</li>
@@ -176,27 +177,27 @@ session_start();
 																				<div class="col-sm-3 static-menu">
 																					<div class="menu">
 																						<ul>
-																							<li><a href="category.html" class="main-menu">Hotel 3</a>
+																							<li><a href="category.php" class="main-menu">Hotel 3</a>
 																								<ul>
-																									<li><a href="category.html">Briyani</a>
+																									<li><a href="category.php">Briyani</a>
 																									</li>
-																									<li><a href="category.html">Soup</a>
+																									<li><a href="category.php">Soup</a>
 																									</li>
-																									<li><a href="category.html">Veg Masala</a>
+																									<li><a href="category.php">Veg Masala</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Masala</a>
+																									<li><a href="category.php">Non - Veg Masala</a>
 																									</li>
-																									<li><a href="category.html">Veg Starters</a>
+																									<li><a href="category.php">Veg Starters</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Starters</a>
+																									<li><a href="category.php">Non - Veg Starters</a>
 																									</li>
-																									<li><a href="category.html">Tandoori </a>
+																									<li><a href="category.php">Tandoori </a>
 																									</li>
-																									<li><a href="category.html">Veg - Rice/Noodles</a>
+																									<li><a href="category.php">Veg - Rice/Noodles</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Rice/Noodles</a>
+																									<li><a href="category.php">Non - Veg Rice/Noodles</a>
 																									</li>
-																									<li><a href="category.html">Tiffen</a>
+																									<li><a href="category.php">Tiffen</a>
 																									</li>
 																								</ul>
 																							</li>
@@ -206,27 +207,27 @@ session_start();
 																				<div class="col-sm-3 static-menu">
 																					<div class="menu">
 																						<ul>
-																							<li><a href="category.html" class="main-menu">Hotel 4</a>
+																							<li><a href="category.php" class="main-menu">Hotel 4</a>
 																								<ul>
-																									<li><a href="category.html">Briyani</a>
+																									<li><a href="category.php">Briyani</a>
 																									</li>
-																									<li><a href="category.html">Soup</a>
+																									<li><a href="category.php">Soup</a>
 																									</li>
-																									<li><a href="category.html">Veg Masala</a>
+																									<li><a href="category.php">Veg Masala</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Masala</a>
+																									<li><a href="category.php">Non - Veg Masala</a>
 																									</li>
-																									<li><a href="category.html">Veg Starters</a>
+																									<li><a href="category.php">Veg Starters</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Starters</a>
+																									<li><a href="category.php">Non - Veg Starters</a>
 																									</li>
-																									<li><a href="category.html">Tandoori </a>
+																									<li><a href="category.php">Tandoori </a>
 																									</li>
-																									<li><a href="category.html">Veg - Rice/Noodles</a>
+																									<li><a href="category.php">Veg - Rice/Noodles</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Rice/Noodles</a>
+																									<li><a href="category.php">Non - Veg Rice/Noodles</a>
 																									</li>
-																									<li><a href="category.html">Tiffen</a>
+																									<li><a href="category.php">Tiffen</a>
 																									</li>
 																								</ul>
 																							</li>
@@ -283,7 +284,7 @@ session_start();
 																			</li>
 																			
 																			<li><a href="#" class="main-menu">Special</a></li>
-																			<li><a href="my-account.html" class="main-menu">My
+																			<li><a href="my-account.php" class="main-menu">My
 																					Account</a>
 																			</li>
 																			<li><a href="#" class="main-menu">Order
@@ -406,8 +407,8 @@ session_start();
 											</tbody>
 										</table>
 										<p class="text-right product-cart-button">
-											<a href="shopping-cart.html" class="btn cart-btn addtocart-btn"><i class="fa fa-shopping-cart hidden"></i>View Cart</a>
-											&nbsp;&nbsp;&nbsp;<a href="shopping-cart.html" class="btn cart-btn checkout-btn"><i class="fa fa-share hidden"></i>Checkout</a>
+											<a href="shopping-cart.php" class="btn cart-btn addtocart-btn"><i class="fa fa-shopping-cart hidden"></i>View Cart</a>
+											&nbsp;&nbsp;&nbsp;<a href="shopping-cart.php" class="btn cart-btn checkout-btn"><i class="fa fa-share hidden"></i>Checkout</a>
 										</p>
 									</div>
 								</li>
@@ -535,7 +536,7 @@ session_start();
 													<div class="product-layout col-xs-12">
 														<div class="product-thumb transition">
 															<div class="image">
-																<a href="hotel-index.html" class="thumb-image">
+																<a href="hotel-index.php?item=Briyani" class="thumb-image">
 																	<img src="assets/images/categories/briyani_logo.png" alt="Briyani" title="Briyani" class="img-responsive">
 																</a>
 																
@@ -543,7 +544,7 @@ session_start();
 															<div class="product-description">
 																<div style="text-align: center;" class="caption">
 																	<div class="title-rating clearfix">
-																		<h4 class="product-title"><a  href="hotel-index.html"><b>Briyani</b></a>
+																		<h4 class="product-title"><a  href="hotel-index.php"><b>Briyani</b></a>
 																		</h4>
 																		
 																	</div>
@@ -557,7 +558,7 @@ session_start();
 													<div class="product-layout col-xs-12">
 														<div class="product-thumb transition">
 															<div class="image">
-																<a href="hotel-index.html" class="thumb-image">
+																<a href="hotel-index.php?item=Veg Masala" class="thumb-image">
 																	<img src="assets/images/categories/veg-masala.png" alt="Veg Masala" title="Veg Masala" class="img-responsive">
 																</a>
 																
@@ -565,7 +566,7 @@ session_start();
 															<div class="product-description">
 																<div style="text-align: center;" class="caption">
 																	<div class="title-rating clearfix">
-																		<h4 class="product-title"><a href="hotel-index.html"><b>Veg Masala</b></a></h4>
+																		<h4 class="product-title"><a href="hotel-index.php"><b>Veg Masala</b></a></h4>
 																		
 																	</div>
 																	<div class="price-cartbtn clearfix">
@@ -580,7 +581,7 @@ session_start();
 													<div class="product-layout col-xs-12">
 														<div class="product-thumb transition">
 															<div class="image">
-																<a href="hotel-index.html" class="thumb-image">
+																<a href="hotel-index.php?item=Soup" class="thumb-image">
 																	<img src="assets/images/categories/soup_png.png" alt="Soups" title="Soups" class="img-responsive">
 																</a>
 																
@@ -588,7 +589,7 @@ session_start();
 															<div class="product-description">
 																<div style="text-align: center;" class="caption">
 																	<div class="title-rating clearfix">
-																		<h4 class="product-title"><a href="hotel-index.html"><b>Soups</b></a></h4>
+																		<h4 class="product-title"><a href="hotel-index.php"><b>Soup</b></a></h4>
 																		
 																	</div>
 																	<div class="price-cartbtn clearfix">
@@ -601,15 +602,15 @@ session_start();
 													<div class="product-layout col-xs-12">
 														<div class="product-thumb transition">
 															<div class="image">
-																<a href="hotel-index.html" class="thumb-image">
-																	<img src="assets/images/categories/non-veg masala.png" alt="Non-Veg Masala" title="Non-Veg Masala" class="img-responsive">
+																<a href="hotel-index.php?item=Non Veg Masala" class="thumb-image">
+																	<img src="assets/images/categories/non-veg masala.png" alt="Non-Veg Masala" title="Non Veg Masala" class="img-responsive">
 																</a>
 																
 															</div>
 															<div class="product-description">
 																<div style="text-align: center;" class="caption">
 																	<div class="title-rating clearfix">
-																		<h4 class="product-title"><a href="hotel-index.html"><b>Non-Veg Masala</b></a></h4>
+																		<h4 class="product-title"><a href="hotel-index.php"><b>Non Veg Masala</b></a></h4>
 																		
 																	</div>
 																	<div class="price-cartbtn clearfix">
@@ -624,8 +625,8 @@ session_start();
 													<div class="product-layout col-xs-12">
 														<div class="product-thumb transition">
 															<div class="image">
-																<a href="hotel-index.html" class="thumb-image">
-																	<img src="assets/images/categories/non-veg_starters.png" alt="Non-Veg Starters" title="Non-Veg Starters" class="img-responsive">
+																<a href="hotel-index.php?item=Non Veg Starter" class="thumb-image">
+																	<img src="assets/images/categories/non-veg_starters.png" alt="Non Veg Starters" title="Non Veg Starters" class="img-responsive">
 																</a>
 																<!-- <div class="button-group">
 																	<button class="wishlist" type="button" data-toggle="tooltip" data-original-title="Add to wishlist"><i class="icon-like"></i></button>
@@ -636,7 +637,7 @@ session_start();
 															<div class="product-description">
 																<div style="text-align: center;" class="caption">
 																	<div class="title-rating clearfix">
-																		<h4 class="product-title"><a href="hotel-index.html"><b>Non-Veg Starters</b></a></h4>
+																		<h4 class="product-title"><a href="hotel-index.php"><b>Non Veg Starter</b></a></h4>
 																		<!-- <div class="rating">
 																			<span class="fa fa-stack"><i class="fa-regular fa-star"></i></span>
 																			<span class="fa fa-stack"><i class="fa-regular fa-star"></i></span>
@@ -668,7 +669,7 @@ session_start();
 													<div class="product-layout col-xs-12">
 														<div class="product-thumb transition">
 															<div class="image">
-																<a href="hotel-index.html" class="thumb-image">
+																<a href="hotel-index.php?item=Veg Starter" class="thumb-image">
 																	<img src="assets/images/categories/veg-starters.png" alt="Veg Starters" title="Veg Starters" class="img-responsive">
 																</a>
 																<!-- <div class="button-group">
@@ -680,7 +681,7 @@ session_start();
 															<div class="product-description">
 																<div style="text-align: center;" class="caption">
 																	<div class="title-rating clearfix">
-																		<h4 class="product-title"><a href="hotel-index.html"><b>Veg Starters</b></a>
+																		<h4 class="product-title"><a href="hotel-index.php"><b>Veg Starter</b></a>
 																		</h4>
 																		<!-- <div class="rating">
 																			<span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
@@ -703,7 +704,7 @@ session_start();
 																			result of rethinking conventions. Of
 																			multiple wireless innovations. And of
 																			breakthrough design. With MacB..</p>
-																		<button class="addcart" type="button" title="Order Now"><i class="icon-shopping-bag hidden"></i><span class=""><a href="shopping-cart.html">Order
+																		<button class="addcart" type="button" title="Order Now"><i class="icon-shopping-bag hidden"></i><span class=""><a href="shopping-cart.php">Order
 																					Now</a></span></button> -->
 																	</div>
 																</div>
@@ -715,7 +716,7 @@ session_start();
 													<div class="product-layout col-xs-12">
 														<div class="product-thumb transition">
 															<div class="image">
-																<a href="hotel-index.html" class="thumb-image">
+																<a href="hotel-index.php?item=Tandoori" class="thumb-image">
 																	<img src="assets/images/categories/Tandoori.png" alt="Tandoori" title="Tandoori" class="img-responsive">
 																</a>
 																
@@ -723,7 +724,7 @@ session_start();
 															<div class="product-description">
 																<div style="text-align: center;" class="caption">
 																	<div class="title-rating clearfix">
-																		<h4 class="product-title"><a href="hotel-index.html"><b>Tandoori</b></a></h4>
+																		<h4 class="product-title"><a href="hotel-index.php"><b>Tandoori</b></a></h4>
 																		
 																	</div>
 																	<div class="price-cartbtn clearfix">
@@ -736,7 +737,7 @@ session_start();
 													<div class="product-layout col-xs-12">
 														<div class="product-thumb transition">
 															<div class="image">
-																<a href="hotel-index.html" class="thumb-image">
+																<a href="hotel-index.php?item=Veg Rice" class="thumb-image">
 																	<img src="assets/images/categories/veg_noodles.png" alt="veg Rice/Noodles" title="Veg Rice/Noodles" class="img-responsive">
 																</a>
 																
@@ -744,7 +745,7 @@ session_start();
 															<div class="product-description">
 																<div style="text-align: center;" class="caption">
 																	<div class="title-rating clearfix">
-																		<h4 class="product-title"><a href="hotel-index.html"><b>Veg Rice/Noodles</b></a></h4>
+																		<h4 class="product-title"><a href="hotel-index.php"><b>Veg Rice</b></a></h4>
 																		
 																	</div>
 																	<div class="price-cartbtn clearfix">
@@ -759,7 +760,7 @@ session_start();
 													<div class="product-layout col-xs-12">
 														<div class="product-thumb transition">
 															<div class="image">
-																<a href="hotel-index.html" class="thumb-image">
+																<a href="hotel-index.php?item=Non Veg Rice" class="thumb-image">
 																	<img src="assets/images/categories/non-veg rice.png" alt="Non-Veg Rice/Noodles" title="Non-Veg Rice/Noodles" class="img-responsive">
 																</a>
 																
@@ -767,7 +768,7 @@ session_start();
 															<div class="product-description">
 																<div style="text-align: center;" class="caption">
 																	<div class="title-rating clearfix">
-																		<h4 class="product-title"><a href="hotel-index.html"><b>Non-Veg Rice/Noodles</b></a></h4>
+																		<h4 class="product-title"><a href="hotel-index.php"><b>Non Veg Rice</b></a></h4>
 																		
 																	</div>
 																	<div class="price-cartbtn clearfix">
@@ -780,7 +781,7 @@ session_start();
 													<div class="product-layout col-xs-12">
 														<div class="product-thumb transition">
 															<div class="image">
-																<a href="hotel-index.html" class="thumb-image">
+																<a href="hotel-index.php?item=Tiffen" class="thumb-image">
 																	<img src="assets/images/categories/tiffen.png" alt="tiffen" title="tiffen" class="img-responsive">
 																</a>
 																
@@ -788,7 +789,7 @@ session_start();
 															<div class="product-description">
 																<div style="text-align: center;" class="caption">
 																	<div class="title-rating clearfix">
-																		<h4 class="product-title"><a href="hotel-index.html"><b>Tiffen</b></a></h4>
+																		<h4 class="product-title"><a href="hotel-index.php"><b>Tiffen</b></a></h4>
 																		
 																	</div>
 																	<div class="price-cartbtn clearfix">
@@ -817,7 +818,7 @@ session_start();
 			<div class="pizza1"></div>
 			
 			<div class="inner1">
-				<div class="banner-desc">VEGGIE FUN <br>DELICIOUS SUMMER!</div> <a href="shopping-cart.html" class="btn-default">Order
+				<div class="banner-desc">VEGGIE FUN <br>DELICIOUS SUMMER!</div> <a href="shopping-cart.php" class="btn-default">Order
 					Now</a>
 			</div>
 			<div class="pizza2"></div>
@@ -839,10 +840,34 @@ session_start();
 					<div class="category-box">
 						<div class="category-feature-list ">
 							<div class="category-carousel owl-carousel owl-theme">
-								<div class="category-layout col-xs-12">
+								<?php
+								$hotelsql = "SELECT * FROM vendorlogin ORDER BY vendor_id ASC";
+								$hotelres = $con->query($hotelsql);
+
+								foreach($hotelres as $hotelrow){
+									echo "<div class='category-layout col-xs-12'>
+									<div class='category-thumb'>
+										<div class='images-hover image'>
+										<a href='category.php?vendor_id={$hotelrow['vendor_id']}&name={$hotelrow['name']}'>
+												<img src='./vendor/images/{$hotelrow['image']}' alt='{$hotelrow['name']}' title='{$hotelrow['name']}' class='img-responsive'>
+											</a>
+										</div>
+										<div class='caption'>
+											<div class='cat-title'>
+												<h4><a href='#'>{$hotelrow['name']}</a>
+												</h4>
+											</div>
+											<div class='cat-sub hidden'>
+											</div>
+										</div>
+									</div>
+								</div>";
+								}
+								?>
+								<!-- <div class="category-layout col-xs-12">
 									<div class="category-thumb">
 										<div class="images-hover image">
-											<a href="category.html">
+											<a href="category.php">
 												<img src="assets/images/categories/hotel.png" alt="hotel 1" title="hotel 1" class="img-responsive">
 											</a>
 										</div>
@@ -859,7 +884,7 @@ session_start();
 								<div class="category-layout col-xs-12">
 									<div class="category-thumb">
 										<div class="images-hover image">
-											<a href="category.html">
+											<a href="category.php">
 												<img src="assets/images/categories/hotel.png" alt="hotel 2" title="hotel 2" class="img-responsive">
 											</a>
 										</div>
@@ -876,7 +901,7 @@ session_start();
 								<div class="category-layout col-xs-12">
 									<div class="category-thumb">
 										<div class="images-hover image">
-											<a href="category.html">
+											<a href="category.php">
 												<img src="assets/images/categories/hotel.png" alt="hotel 3" title="hotel 3" class="img-responsive">
 											</a>
 										</div>
@@ -893,7 +918,7 @@ session_start();
 								<div class="category-layout col-xs-12">
 									<div class="category-thumb">
 										<div class="images-hover image">
-											<a href="category.html">
+											<a href="category.php">
 												<img src="assets/images/categories/hotel.png" alt="hotel 4" title="hotel 4" class="img-responsive">
 											</a>
 										</div>
@@ -910,7 +935,7 @@ session_start();
 								<div class="category-layout col-xs-12">
 									<div class="category-thumb">
 										<div class="images-hover image">
-											<a href="category.html">
+											<a href="category.php">
 												<img src="assets/images/categories/hotel.png" alt="hotel 5" title="hotel 5" class="img-responsive">
 											</a>
 										</div>
@@ -927,7 +952,7 @@ session_start();
 								<div class="category-layout col-xs-12">
 									<div class="category-thumb">
 										<div class="images-hover image">
-											<a href="category.html">
+											<a href="category.php">
 												<img src="assets/images/categories/hotel.png" alt="hotel 6" title="hotel 6" class="img-responsive">
 											</a>
 										</div>
@@ -944,7 +969,7 @@ session_start();
 								<div class="category-layout col-xs-12">
 									<div class="category-thumb">
 										<div class="images-hover image">
-											<a href="category.html">
+											<a href="category.php">
 												<img src="assets/images/categories/hotel.png" alt="hotel 7" title="hotel 7" class="img-responsive">
 											</a>
 										</div>
@@ -961,7 +986,7 @@ session_start();
 								<div class="category-layout col-xs-12">
 									<div class="category-thumb">
 										<div class="images-hover image">
-											<a href="category.html">
+											<a href="category.php">
 												<img src="assets/images/categories/hotel.png" alt="hotel 8" title="hotel 8" class="img-responsive">
 											</a>
 										</div>
@@ -978,7 +1003,7 @@ session_start();
 								<div class="category-layout col-xs-12">
 									<div class="category-thumb">
 										<div class="images-hover image">
-											<a href="category.html">
+											<a href="category.php">
 												<img src="assets/images/categories/hotel.png" alt="hotel 9" title="hotel 9" class="img-responsive">
 											</a>
 										</div>
@@ -995,7 +1020,7 @@ session_start();
 								<div class="category-layout col-xs-12">
 									<div class="category-thumb">
 										<div class="images-hover image">
-											<a href="category.html">
+											<a href="category.php">
 												<img src="assets/images/categories/hotel.png" alt="hotel 10" title="hotel 10" class="img-responsive">
 											</a>
 										</div>
@@ -1008,7 +1033,7 @@ session_start();
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</div>
@@ -1130,7 +1155,7 @@ session_start();
 
 
 </body>
-
+<script src="./js/index.js"></script>
 
 
 </html>

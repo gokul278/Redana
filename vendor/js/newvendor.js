@@ -1,17 +1,17 @@
-$("#email").click(()=>{
+$("#email").click(() => {
     $("#already").text("");
 })
 
 function validateImage(input) {
     const file = input.files[0];
-    
+
     if (file) {
         const img = new Image();
         img.src = URL.createObjectURL(file);
-        
+
         img.onload = function() {
             if (img.width === 650 && img.height === 650) {
-                $("#frm").submit((event)=>{
+                $("#frm").submit((event) => {
                     event.preventDefault();
                     var frm = $("#frm")[0];
                     var frmdata = new FormData(frm);
@@ -23,10 +23,10 @@ function validateImage(input) {
                         contentType: false,
                         cache: false,
                         beforeSend: function() {
-                        $("#indication").text("Wait a second ...!");
-                        $("#loading").css("display", "block");
+                            $("#indication").text("Wait a second ...!");
+                            $("#loading").css("display", "block");
                         },
-                        success: function (response) {
+                        success: function(response) {
                             console.log(response); // Log the response
                             var data = JSON.parse(response);
                             if (data.status == "already") {
@@ -43,7 +43,7 @@ function validateImage(input) {
                             }
                         }
                     });
-                    
+
                 })
             } else {
                 alert("Please upload a 650x650 pixel image.");

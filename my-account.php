@@ -347,85 +347,116 @@ session_start();
                             </div>
                         </div>
                     </div> -->
-                    <div class="cart-content">
-                        <div id="cart" class="btn-group btn-block">
-                            <button type="button" data-toggle="dropdown"
-                                data-loading-text="<i class='fa fa-spinner fa-spin' aria-hidden='true'></i>"
-                                class="btn btn-inverse btn-block btn-lg dropdown-toggle"><i class="icon-bag"></i> <span
-                                    id="cart-total">2<span class="hidden">item(s) - $0.00</span></span></button>
-                                    <ul class="dropdown-menu pull-right header-cart-toggle">
-                                        <li class="cart-content-product">
-                                            <table class="table table-striped">
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="text-center product-cart-thumb">
-                                                            <a href="#">
-                                                                <img src="assets/images/hotels/briyani/empty briyani.png" alt="veggie delight" title="veggie delight" class="img-thumbnail">
-                                                            </a>
-                                                        </td>
-                                                        <td class="text-left product-cart-details">
-                                                            <a href="#" class="product-item-name">Empty Briyani</a>
-                                                            <br>
-                                                            <div class="product-cart-info">
-                                                                <span class="product-cart-qty">1 x </span>
-                                                                <span class="product-cart-price">₹80.00</span>
-                                                            </div>
-                                                        </td>
-                                                        <td class="text-center product-cart-close">
-                                                            <button type="button" title="Remove" class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center product-cart-thumb">
-                                                            <a href="#">
-                                                                <img src="assets/images/hotels/briyani/chicken briyani.png" alt="PeppiPizza" title="PeppiPizza" class="img-thumbnail">
-                                                            </a>
-                                                        </td>
-                                                        <td class="text-left product-cart-details">
-                                                            <a href="#" class="product-item-name">Chicken Briyani</a>
-                                                            <div class="product-cart-info">
-                                                                <span class="product-cart-qty">1 x </span>
-                                                                <span class="product-cart-price">₹100.100</span>
-                                                            </div>
-                                                        </td>
-                                                        <td class="text-center product-cart-close">
-                                                            <button type="button" title="Remove" class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </li>
-                                        <li>
-                                            <div>
-                                                <table class="table table-bordered">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="text-left"><strong>Sub-Total</strong></td>
-                                                            <td class="text-right">₹180.00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-left"><strong>SGST (2%)</strong></td>
-                                                            <td class="text-right">₹10.00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-left"><strong>VAT (2%)</strong></td>
-                                                            <td class="text-right">₹10.00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-left"><strong>Total</strong></td>
-                                                            <td class="text-right">₹200.00</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <p class="text-right product-cart-button">
-                                                    <a href="shopping-cart.html" class="btn cart-btn addtocart-btn"><i class="fa fa-shopping-cart hidden"></i>View Cart</a>
-                                                    &nbsp;&nbsp;&nbsp;<a href="shopping-cart.html" class="btn cart-btn checkout-btn"><i class="fa fa-share hidden"></i>Checkout</a>
-                                                </p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                        </div>
-                    </div>
+                    <?php
+                        if(isset($_SESSION["customer_id"])){
+                    ?> 
+
+
+					<div class="cart-content">
+						<div id="cart" class="btn-group btn-block">
+							<button type="button" data-toggle="dropdown" data-loading-text="<i class='fa fa-spinner fa-spin' aria-hidden='true'></i>" class="btn btn-inverse btn-block btn-lg dropdown-toggle"><i class="icon-bag"></i> <span id="cart-total">0<span class="hidden">item(s) - $0.00</span></span></button>
+							<ul class="dropdown-menu pull-right header-cart-toggle">
+								<li class="cart-content-product">
+									<table class="table table-striped">
+										<tbody>
+											<tr>
+												<td class="text-center product-cart-thumb">
+													<a href="#">
+														<img src="assets/images/hotels/briyani/empty briyani.png" alt="veggie delight" title="veggie delight" class="img-thumbnail">
+													</a>
+												</td>
+												<td class="text-left product-cart-details">
+													<a href="#" class="product-item-name">Empty Briyani</a>
+													<br>
+													<div class="product-cart-info">
+														<span class="product-cart-qty">1 x </span>
+														<span class="product-cart-price">₹80.00</span>
+													</div>
+												</td>
+												<td class="text-center product-cart-close">
+													<button type="button" title="Remove" class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button>
+												</td>
+											</tr>
+											<tr>
+												<td class="text-center product-cart-thumb">
+													<a href="#">
+														<img src="assets/images/hotels/briyani/chicken briyani.png" alt="PeppiPizza" title="PeppiPizza" class="img-thumbnail">
+													</a>
+												</td>
+												<td class="text-left product-cart-details">
+													<a href="#" class="product-item-name">Chicken Briyani</a>
+													<div class="product-cart-info">
+														<span class="product-cart-qty">1 x </span>
+														<span class="product-cart-price">₹100.100</span>
+													</div>
+												</td>
+												<td class="text-center product-cart-close">
+													<button type="button" title="Remove" class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</li>
+								<li>
+									<div>
+										<table class="table table-bordered">
+											<tbody>
+												<tr>
+													<td class="text-left"><strong>Sub-Total</strong></td>
+													<td class="text-right">₹180.00</td>
+												</tr>
+												<tr>
+													<td class="text-left"><strong>SGST (2%)</strong></td>
+													<td class="text-right">₹10.00</td>
+												</tr>
+												<tr>
+													<td class="text-left"><strong>VAT (2%)</strong></td>
+													<td class="text-right">₹10.00</td>
+												</tr>
+												<tr>
+													<td class="text-left"><strong>Total</strong></td>
+													<td class="text-right">₹200.00</td>
+												</tr>
+											</tbody>
+										</table>
+										<p class="text-right product-cart-button">
+											<a href="shopping-cart.html" class="btn cart-btn addtocart-btn"><i class="fa fa-shopping-cart hidden"></i>View Cart</a>
+											&nbsp;&nbsp;&nbsp;<a href="shopping-cart.html" class="btn cart-btn checkout-btn"><i class="fa fa-share hidden"></i>Checkout</a>
+										</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+
+					<?php
+					}else{
+					?>
+
+					<div class="cart-content">
+						<div id="cart" class="btn-group btn-block">
+							<button type="button" data-toggle="dropdown" data-loading-text="<i class='fa fa-spinner fa-spin' aria-hidden='true'></i>" class="btn btn-inverse btn-block btn-lg dropdown-toggle"><i class="icon-bag"></i> <span id="cart-total">!<span class="hidden">item(s) - $0.00</span></span></button>
+							<ul class="dropdown-menu pull-right header-cart-toggle">
+								<li>
+									<br>
+									<div>
+										<p class="text-right product-cart-button">
+											<a href="Signup.php" class="btn cart-btn addtocart-btn"><i class="fa fa-shopping-cart hidden"></i> Sign Up </a>
+											&nbsp;&nbsp;&nbsp;<a href="my-account.php" class="btn cart-btn checkout-btn"><i class="fa fa-share hidden"></i> Login </a>
+										</p>
+										<p style="color:red" align="center">to continue</p>
+										<br>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<?php
+					}?>
+
+
                     <div id="header_ac" class="dropdown">
     
                         <?php

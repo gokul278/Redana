@@ -1,3 +1,8 @@
+<?php
+session_start();
+include('./requiredfiles/connectiondb.php');
+?>
+
 <!DOCTYPE HTML>
 <html lang="en-US">
 
@@ -64,7 +69,7 @@
 			<div class="header-inner">
 				<div class="header-left">
 					<div id="logo">
-						<a href="index.html">
+						<a href="index.php">
 							<img style="width: 80px;height: 75px; border-radius: 50%; padding: 5px;" src="assets/images/Redana-logo.png" title="redana" alt="Redana" class="img-responsive">
 								
 						</a>
@@ -96,7 +101,7 @@
 													data-transition="slide" data-animationtime="500">
 
 													<li class="home">
-														<a href="index.html">
+														<a href="index.php">
 															<span><strong> Home </strong></span>
 														</a>
 													</li>
@@ -120,27 +125,27 @@
 																				<div class="col-sm-3 static-menu">
 																					<div class="menu">
 																						<ul>
-																							<li><a href="category.html" class="main-menu">Yummeys</a>
+																							<li><a href="category.php" class="main-menu">Yummeys</a>
 																								<ul>
-																									<li><a href="category.html">Briyani</a>
+																									<li><a href="category.php">Briyani</a>
 																									</li>
-																									<li><a href="category.html">Soup</a>
+																									<li><a href="category.php">Soup</a>
 																									</li>
-																									<li><a href="category.html">Veg Masala</a>
+																									<li><a href="category.php">Veg Masala</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Masala</a>
+																									<li><a href="category.php">Non - Veg Masala</a>
 																									</li>
-																									<li><a href="category.html">Veg Starters</a>
+																									<li><a href="category.php">Veg Starters</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Starters</a>
+																									<li><a href="category.php">Non - Veg Starters</a>
 																									</li>
-																									<li><a href="category.html">Tandoori </a>
+																									<li><a href="category.php">Tandoori </a>
 																									</li>
-																									<li><a href="category.html">Veg - Rice/Noodles</a>
+																									<li><a href="category.php">Veg - Rice/Noodles</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Rice/Noodles</a>
+																									<li><a href="category.php">Non - Veg Rice/Noodles</a>
 																									</li>
-																									<li><a href="category.html">Tiffen</a>
+																									<li><a href="category.php">Tiffen</a>
 																									</li>
 																								</ul>
 																							</li>
@@ -150,27 +155,27 @@
 																				<div class="col-sm-3 static-menu">
 																					<div class="menu">
 																						<ul>
-																							<li><a href="category.html" class="main-menu">Hotel 2</a>
+																							<li><a href="category.php" class="main-menu">Hotel 2</a>
 																								<ul>
-																									<li><a href="category.html">Briyani</a>
+																									<li><a href="category.php">Briyani</a>
 																									</li>
-																									<li><a href="category.html">Soup</a>
+																									<li><a href="category.php">Soup</a>
 																									</li>
-																									<li><a href="category.html">Veg Masala</a>
+																									<li><a href="category.php">Veg Masala</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Masala</a>
+																									<li><a href="category.php">Non - Veg Masala</a>
 																									</li>
-																									<li><a href="category.html">Veg Starters</a>
+																									<li><a href="category.php">Veg Starters</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Starters</a>
+																									<li><a href="category.php">Non - Veg Starters</a>
 																									</li>
-																									<li><a href="category.html">Tandoori </a>
+																									<li><a href="category.php">Tandoori </a>
 																									</li>
-																									<li><a href="category.html">Veg - Rice/Noodles</a>
+																									<li><a href="category.php">Veg - Rice/Noodles</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Rice/Noodles</a>
+																									<li><a href="category.php">Non - Veg Rice/Noodles</a>
 																									</li>
-																									<li><a href="category.html">Tiffen</a>
+																									<li><a href="category.php">Tiffen</a>
 																									</li>
 																								</ul>
 																							</li>
@@ -180,27 +185,27 @@
 																				<div class="col-sm-3 static-menu">
 																					<div class="menu">
 																						<ul>
-																							<li><a href="category.html" class="main-menu">Hotel 3</a>
+																							<li><a href="category.php" class="main-menu">Hotel 3</a>
 																								<ul>
-																									<li><a href="category.html">Briyani</a>
+																									<li><a href="category.php">Briyani</a>
 																									</li>
-																									<li><a href="category.html">Soup</a>
+																									<li><a href="category.php">Soup</a>
 																									</li>
-																									<li><a href="category.html">Veg Masala</a>
+																									<li><a href="category.php">Veg Masala</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Masala</a>
+																									<li><a href="category.php">Non - Veg Masala</a>
 																									</li>
-																									<li><a href="category.html">Veg Starters</a>
+																									<li><a href="category.php">Veg Starters</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Starters</a>
+																									<li><a href="category.php">Non - Veg Starters</a>
 																									</li>
-																									<li><a href="category.html">Tandoori </a>
+																									<li><a href="category.php">Tandoori </a>
 																									</li>
-																									<li><a href="category.html">Veg - Rice/Noodles</a>
+																									<li><a href="category.php">Veg - Rice/Noodles</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Rice/Noodles</a>
+																									<li><a href="category.php">Non - Veg Rice/Noodles</a>
 																									</li>
-																									<li><a href="category.html">Tiffen</a>
+																									<li><a href="category.php">Tiffen</a>
 																									</li>
 																								</ul>
 																							</li>
@@ -210,27 +215,27 @@
 																				<div class="col-sm-3 static-menu">
 																					<div class="menu">
 																						<ul>
-																							<li><a href="category.html" class="main-menu">Hotel 4</a>
+																							<li><a href="category.php" class="main-menu">Hotel 4</a>
 																								<ul>
-																									<li><a href="category.html">Briyani</a>
+																									<li><a href="category.php">Briyani</a>
 																									</li>
-																									<li><a href="category.html">Soup</a>
+																									<li><a href="category.php">Soup</a>
 																									</li>
-																									<li><a href="category.html">Veg Masala</a>
+																									<li><a href="category.php">Veg Masala</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Masala</a>
+																									<li><a href="category.php">Non - Veg Masala</a>
 																									</li>
-																									<li><a href="category.html">Veg Starters</a>
+																									<li><a href="category.php">Veg Starters</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Starters</a>
+																									<li><a href="category.php">Non - Veg Starters</a>
 																									</li>
-																									<li><a href="category.html">Tandoori </a>
+																									<li><a href="category.php">Tandoori </a>
 																									</li>
-																									<li><a href="category.html">Veg - Rice/Noodles</a>
+																									<li><a href="category.php">Veg - Rice/Noodles</a>
 																									</li>
-																									<li><a href="category.html">Non - Veg Rice/Noodles</a>
+																									<li><a href="category.php">Non - Veg Rice/Noodles</a>
 																									</li>
-																									<li><a href="category.html">Tiffen</a>
+																									<li><a href="category.php">Tiffen</a>
 																									</li>
 																								</ul>
 																							</li>
@@ -428,8 +433,8 @@
 													</tbody>
 												</table>
 												<p class="text-right product-cart-button">
-													<a href="shopping-cart.html" class="btn cart-btn addtocart-btn"><i class="fa fa-shopping-cart hidden"></i>View Cart</a>
-													&nbsp;&nbsp;&nbsp;<a href="shopping-cart.html" class="btn cart-btn checkout-btn"><i class="fa fa-share hidden"></i>Checkout</a>
+													<a href="shopping-cart.php" class="btn cart-btn addtocart-btn"><i class="fa fa-shopping-cart hidden"></i>View Cart</a>
+													&nbsp;&nbsp;&nbsp;<a href="shopping-cart.php" class="btn cart-btn checkout-btn"><i class="fa fa-share hidden"></i>Checkout</a>
 												</p>
 											</div>
 										</li>
@@ -442,9 +447,9 @@
 								class="caret hidden"></span>
 						</a>
 						<ul class="dropdown-menu dropdown-menu-right account-link-toggle">
-							<li><a href="Signup.html">Signup</a>
+							<li><a href="Signup.php">Signup</a>
 							</li>
-							<li><a href="my-account.html">Login</a></li>
+							<li><a href="my-account.php">Login</a></li>
 						</ul>
 					</div>
 				</div>
@@ -464,7 +469,7 @@
 							<h3 class="toggled relative">Categories</h3>
 							<ul class="list-unstyled parent" id="select-category">
 								<li class="has-more-category">
-									<a href="donuts.html" class="list-group-item main-item">Drink<span
+									<a href="donuts.php" class="list-group-item main-item">Drink<span
 											class="toggled"><i class="fa fa-plus"></i></span>
 									</a>
 									<ul class="list-unstyled child-categories group">
@@ -662,19 +667,22 @@
 					</script>
 					
 				</aside>
+
+				
 				<div id="content" class="col-sm-9  all-blog">
 					<div class="breadcrumb-main">
 						<div class="breadcrumb-container clearfix">
-							<h1 class="page-title">Welcome to Yummeys</h1>
+							<h1 class="page-title">Welcome to <?php echo $_GET['name'];?></h1>
 
 							<ul class="breadcrumb">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="hotel-index.html">Hotel</a></li>
-								<li><a href="category.html">Yummeys</a></li>
+								<li><a href="index.php">Home</a></li>
+								<li><a href="hotel-index.php">Hotel</a></li>
+								<li><a href="category.php"> <?php echo $_GET['name'];?></a></li>
 
 							</ul>
 						</div>
 					</div>
+
 					<div class="row">
 						
 						<div class="category-desc col-sm-12">
@@ -694,7 +702,7 @@
 								</div>
 							</div>
 							
-							<div class="col-sm-7 col-xs-12 category-sorting">
+							<!-- <div class="col-sm-7 col-xs-12 category-sorting">
 								<div class="sort-cat">
 									<div class="text-category-sort">
 										<label class="input-group-addon" for="input-sort">Sort By:</label>
@@ -739,194 +747,59 @@
 										</select>
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 					<div class="category-row row">
-						<div class="product-layout product-list col-xs-12">
-							<div class="product-thumb">
-								<div class="image">
-									<a href="product.html" class="thumb-image">
-										<img src="assets/images/hotels/briyani/empty briyani.png" alt="Buttercrust" title="Buttercrust"
-											class="img-responsive">
-									</a>
-									
-									
-									
-								</div>
-								<div class="product-description">
-									<div style="text-align: center;" class="caption">
-										<div class="title-rating clearfix">
-											<h4 class="product-title"><a href="product.html">Empty Briyani</a>
-											</h4>
-											
-										</div>
+						<?php
+						$categorysql = "SELECT * FROM food_menu WHERE vendor_id = '{$_GET['vendor_id']}' ORDER BY cuisines ASC";
+						$categoryres = $con->query($categorysql);
 
-										<div style="text-align: center;" class="price-cartbtn clearfix">
-											<p  class="price">
-												₹80.00
-												<span class="price-tax">Ex Tax: $100.00</span>
-											</p>
-											<br>
-											<button class="addcart" type="button"><i
-												class="icon-shopping-bag hidden"></i>
-											<span class=""><a href="###">Add to Cart</a>
-											</span></button>
-											
+						if($categoryres){
+							foreach($categoryres as $categoryrow){
+								echo "<div class='product-layout product-list col-xs-12'>
+								<div class='product-thumb'>
+									<div class='image'>
+										<a href='product.php' class='thumb-image'>
+											<img src='./vendor/foodimages/{$categoryrow['food_snaps']}' alt='gorgonzola' title='gorgonzola'
+												class='img-responsive'>
+										</a>
+									</div>
+							
+									<div class='product-description'>
+										<div style='text-align: center;' class='caption'>
+											<div class='title-rating clearfix'>
+												<h4 class='product-title'><a href='product.php'>{$categoryrow['food_name']}</a>
+												</h4>
+											</div>
+											<div style='text-align: center;' class='price-cartbtn clearfix'>
+												<p class='price'>
+													₹{$categoryrow['food_cost']}
+													
+												</p>
+												<br>
+												<button class='addcart' type='button'><i
+														class='icon-shopping-bag hidden'></i>
+													<span class=''><a href='##'>Add to Cart</a>
+													</span></button>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="product-layout product-list col-xs-12">
-							<div class="product-thumb">
-								<div class="image">
-									<a href="product.html" class="thumb-image">
-										<img src="assets/images/hotels/briyani/chicken briyani.png" alt="gorgonzola" title="gorgonzola"
-											class="img-responsive">
-									</a>
-									
-									
-	
-								</div>
+							";
+							}
+						}
 
-								
-								<div class="product-description">
-									<div style="text-align: center;" class="caption">
-										<div class="title-rating clearfix">
-											<h4 class="product-title"><a href="product.html">Chicken Briyani</a>
-											</h4>
-											
-										</div>
-										<div style="text-align: center;" class="price-cartbtn clearfix">
-											<p class="price">
-												₹100.00
-												<span class="price-tax">Ex Tax: $279.99</span>
-											</p>
-											<br>
-											<button class="addcart" type="button"><i
-												class="icon-shopping-bag hidden"></i>
-											<span class=""><a href="##">Add to Cart</a>
-											</span></button>
-											
-											
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="product-layout product-list col-xs-12">
-							<div class="product-thumb">
-								<div class="image">
-									<a href="product.html" class="thumb-image">
-										<img src="assets/images/hotels/briyani/65 chicken briyani.png" alt="Mozzarella" title="Mozzarella"
-											class="img-responsive">
-									</a>
-									
-									
-
-								</div>
-								<div class="product-description">
-									<div style="text-align: center;"  class="caption">
-										<div class="title-rating clearfix">
-											<h4 class="product-title"><a href="product.html">65 Briyani</a>
-											</h4>
-											
-										</div>
-										<div style="text-align: center;" class="price-cartbtn clearfix">
-											<p class="price">
-												₹100.00
-												<span class="price-tax">Ex Tax: $100.00</span>
-											</p>
-											<br>
-											<button class="addcart" type="button"><i
-												class="icon-shopping-bag hidden"></i>
-											<span class=""><a href="##">Add to Cart</a>
-											</span></button>
-											
-											
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="product-layout product-list col-xs-12">
-							<div class="product-thumb">
-								<div class="image">
-									<a href="product.html" class="thumb-image">
-										<img src="assets/images/hotels/briyani/hyderabad briyani.png" alt="Speedy Pizza" title="Speedy Pizza"
-											class="img-responsive">
-									</a>
-									
-
-									
-
-								</div>
-								<div class="product-description">
-									<div style="text-align: center;"  class="caption">
-										<div class="title-rating clearfix">
-											<h4 class="product-title"><a href="product.html">Hyderbad Briyani</a></h4>
-											
-										</div>
-										<div style="text-align: center;"  class="price-cartbtn clearfix">
-											<p class="price">
-												<span class="price-new">₹120.00</span>
-												<span class="price-tax">Ex Tax: $90.00</span>
-											</p>
-											<br>
-											<button class="addcart" type="button"><i
-												class="icon-shopping-bag hidden"></i>
-											<span class=""><a href="##">Add to Cart</a>
-											</span></button>
-											
-											
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="product-layout product-list col-xs-12">
-							<div class="product-thumb">
-								<div class="image">
-									<a href="product.html" class="thumb-image">
-										<img src="assets/images/hotels/briyani/mohali briyani.png" alt="veggie delight"
-											title="veggie delight" class="img-responsive">
-									</a>
-									
-
-									
-
-								</div>
-								<div class="product-description">
-									<div style="text-align: center;" class="caption">
-										<div class="title-rating clearfix">
-											<h4 class="product-title"><a href="product.html">Mohali Briyani</a></h4>
-											
-										</div>
-										<div style="text-align: center;" class="price-cartbtn clearfix">
-											<p class="price">
-												₹130.00
-												<span class="price-tax">Ex Tax: ₹130.00</span>
-											</p>
-											<br>
-											<button class="addcart" type="button"><i
-												class="icon-shopping-bag hidden"></i>
-											<span class=""><a href="##">Add to Cart</a>
-											</span></button>
-											
-											
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+						?>
+						
 					</div>
-					<div class="pagination-main">
+					<!-- <div class="pagination-main">
 						<div class="row">
 							<div class="col-sm-6 text-left">Showing 1 to 5 of 5 (1 Pages)</div>
 							<div class="col-sm-6 text-right"></div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -974,7 +847,7 @@
 					<div class="col-md-3">
 						<h5 class="toggled">Quick links</h5>
 						<ul class="list-unstyled">
-							<li><a href="index.html" class="contact_site">Home</a></li>
+							<li><a href="index.php" class="contact_site">Home</a></li>
 							<li><a href="#" class="contact_site">About
 									Us</a></li>
 							<li><a href="#" class="contact_site">Contact
