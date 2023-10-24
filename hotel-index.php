@@ -765,7 +765,7 @@ include('./requiredfiles/connectiondb.php');
 								echo "<div class='product-layout product-list col-xs-12'>
 								<div class='product-thumb'>
 									<div class='image'>
-										<a href='category-index.php?hotedid={$categoryrow['vendor_id']}&name={$categoryrow['name']}&item={$_GET['item']}&image={$categoryrow['image']}' class='thumb-image'>
+										<a href='category-index.php?hotelid={$categoryrow['vendor_id']}&name={$categoryrow['name']}&item={$_GET['item']}' class='thumb-image'>
 											<img src='./vendor/images/{$categoryrow['image']}' alt='{$categoryrow['name']}' title='{$categoryrow['name']}'
 												class='img-responsive'>
 										</a>

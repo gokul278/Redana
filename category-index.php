@@ -676,7 +676,7 @@ include('./requiredfiles/connectiondb.php');
 							<ul class="breadcrumb">
 								<li><a href="index.php">Home</a></li>
 								<li><a href="hotel-index.php?item=Briyani"> <?php echo $_GET['item'];?> </a></li>
-                                <li><a href="hotel-index.php?item=Briyani"> <?php echo $_GET['name'];?> &nbsp;&nbsp;<img height="22" style="border-radius:50%" src="./vendor/images/<?php echo $_GET['image'];?>"/> </a></li>
+                                <li><a href="hotel-index.php?item=Briyani"> <?php echo $_GET['name'];?> </a></li>
                                 
 							</ul>
 						</div>
@@ -758,7 +758,7 @@ include('./requiredfiles/connectiondb.php');
 						$categorysql = "SELECT  *
                         FROM food_menu
                         JOIN vendorlogin ON food_menu.vendor_id = vendorlogin.vendor_id
-                        WHERE food_menu.vendor_id=5735 and food_menu.cuisines Like '%{$_GET['item']}'";
+                        WHERE food_menu.vendor_id={$_GET['hotelid']} and food_menu.cuisines Like '%{$_GET['item']}'";
 						$categoryres = $con->query($categorysql);
 
 						if($categoryres){
